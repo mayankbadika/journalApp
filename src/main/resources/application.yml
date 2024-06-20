@@ -1,19 +1,19 @@
 spring:
   redis:
-    host: redis-14343.c264.ap-south-1-1.ec2.redns.redis-cloud.com
-    username: default
-    password: Sz2JpEFyXZacbY5Y6WGnt8B4Acu7WalM
-    port: 14343
+    host: ${REDIS_HOST}
+    username: ${REDIS_USERNAME}
+    password: ${REDIS_PASSWORD}
+    port: ${REDIS_PORT}
   data:
     mongodb:
-      uri: mongodb+srv://mongoDBApp:testmongoDBApp@urlcluster.zyf7qrm.mongodb.net/?retryWrites=true&w=majority&appName=urlCluster
-      database: journaldb
+      uri: ${MONGODB_URI}
+      database: ${MONGODB_DATABASE}
       auto-index-creation: true
   mail:
     host: smtp.gmail.com
     port: 587
-    username: mayank.badika@gmail.com
-    password: V3ry_Str0ng_Password
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -24,4 +24,4 @@ spring:
 
 weather:
   api:
-    key: 1f80e1c6d5964a8a9e1212224240102
+    key: ${WEATHER_API_KEY}
